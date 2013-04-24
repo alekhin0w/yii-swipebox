@@ -1,4 +1,4 @@
-Swipebox
+Yii-Swipebox
 ================================
 
 A touchable Yii Widget lightbox.
@@ -29,7 +29,7 @@ Chrome, Safari, Firefox, Opera, IE8+, IOS4+, Android, windows phone.
 Copy Yii-Swipebox inside protected/widgets.
 
 In your view, call your widget:
-`
+```php
 // this could be inside a yii view file
 $this->widget('application.widgets.SwipeboxWidget.SwipeboxWidget', 
 	array(
@@ -38,9 +38,9 @@ $this->widget('application.widgets.SwipeboxWidget.SwipeboxWidget',
 		'useCss' => true
 	)
 ); 
-`
+```
 Where images must be an array of arrays containing the url of the image, and the caption of it.
-`
+```php
 array(
 	array(
 		'url' 	=> 'http://theurl.com/images/myimage.png',
@@ -48,7 +48,7 @@ array(
 	),
 	[...] // and so on...
 );
-
+```
 ###And the last step!
 
 There is no last step.
