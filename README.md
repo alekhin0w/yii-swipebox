@@ -1,16 +1,17 @@
 Swipebox
 ================================
 
-A touchable jQuery lightbox.
+A touchable Yii Widget lightbox.
 
-[View project page](http://brutaldesign.github.com/swipebox)
+[Original project page](http://brutaldesign.github.com/swipebox)
 
-##What is Swipebox ?
+##What is Yii-Swipebox ?
 
-Swipebox is a jQuery "lightbox" plugin for desktop, mobile and tablet.
+Yii-Swipebox is a jQuery "lightbox" widget for yii, supporting desktop, mobile and tablet.
 
-##Features
+##Features from original Swipebox
 
+- Tested and working smoothly with Yii 1.1.13
 - Swipe gestures for mobile
 - Keyboard Navigation for desktop
 - CSS transitions with jQuery fallback
@@ -23,35 +24,33 @@ Chrome, Safari, Firefox, Opera, IE8+, IOS4+, Android, windows phone.
 
 ##Usage
 
-###Javascript
+###Install
 
-Include jquery and the swipebox script in your head tags or right before your body closing tag.
+Copy Yii-Swipebox inside protected/widgets.
 
-`<script src="lib/jquery-1.9.0.js"></script>`
+In your view, call your widget:
+`
+// this could be inside a yii view file
+$this->widget('application.widgets.SwipeboxWidget.SwipeboxWidget', 
+	array(
+		'images' => $images, 
+		'hideBarsDelay' => 0, 
+		'useCss' => true
+	)
+); 
+`
+Where images must be an array of arrays containing the url of the image, and the caption of it.
+`
+array(
+	array(
+		'url' 	=> 'http://theurl.com/images/myimage.png',
+		'name' 	=> 'my caption',
+	),
+	[...] // and so on...
+);
 
-`<script src="source/jquery.swipebox.min.js"></script>`
+###And the last step!
 
-###CSS
+There is no last step.
+You can go flawlessly from here!
 
-Include the swipebox CSS style in your head tags.
-
-`<link rel="stylesheet" href="source/swipebox.css">`
-
-###HTML
-
-Use a specific class for your links and use the title attribute as caption.
-
-`<a href="big/image.jpg" class="swipebox" title="My Caption">`
-
-###Fire the plugin
-
-Bind the swipebox behaviour on every link with the "swipebox" class.
-
-`$(".swipebox").swipebox();`
-
-
-###Need a couple of options?
-
-
-`useCSS : true, // false will force the use of jQuery for animations`
-`hideBarsDelay : 3000 // 0 to always show caption and action bar`
