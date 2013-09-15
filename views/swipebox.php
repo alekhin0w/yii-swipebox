@@ -3,13 +3,17 @@
 <div class="clear"></div>
 <div id="swipebox">
 <?php 
-    foreach($images as $image)
+    foreach($medias as $media)
     {
         ?>
         <div class="box" style="float:left;width:150px;height:auto; padding: 5px 5px 5px 5px;">
-            <a href="<?php echo $image['url'];?>" class="swipebox" title="<?php echo $image['name'];?>">
-                <img width="150px" height="auto" src="<?php echo $image['url'];?>" alt="<?php echo $image['name']; ?>">
-            </a>
+            <a href="<?php echo $media['url'];?>" class="swipebox" title="<?php echo $media['name'];?>">
+                <?php if(isset($media['thumb'])) { ?>
+                <img width="150px" height="auto" src="<?php echo $media['thumb'];?>" alt="<?php echo $media['name']; ?>">
+                <?php } else { ?>
+                <img width="150px" height="auto" src="<?php echo $media['url'];?>" alt="<?php echo $media['name']; ?>">
+                <?php } ?>
+            </a>    
         </div>
         <?
     }
