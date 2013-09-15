@@ -11,10 +11,9 @@ Yii-Swipebox is a jQuery "lightbox" widget for yii, supporting desktop, mobile a
 
 ##Backwards compatibility with 1.0
 
-The backwards compatibility is broken for the older version of Yii-Swipebox. You can grab the old version in 1.0 branch.
-The versions will be held within the original project version numbers. This version supports swipebox 1.1.2.
-If you want to upgrade, you only need to call the widget changing the array key 'images' to 'medias'.
-All new settings have defaults, so doesn't matter if you not add them.
+- The backwards compatibility is broken for the older version of Yii-Swipebox. You can grab the old version in 1.0 branch.
+- The versions will be held within the original project version numbers. This version supports swipebox 1.1.2.
+- If you want to upgrade, you only need to call the widget changing the array key 'images' to 'medias'. All new settings have defaults, so doesn't matter if you not add them.
 
 ##Features supported from original Swipebox
 
