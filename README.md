@@ -11,12 +11,13 @@ Yii-Swipebox is a jQuery "lightbox" widget for yii, supporting desktop, mobile a
 
 ##Features from original Swipebox
 
-- Tested and working smoothly with Yii 1.1.13
+- Tested and working smoothly with Yii 1.1.14
 - Swipe gestures for mobile
 - Keyboard Navigation for desktop
 - CSS transitions with jQuery fallback
 - Retina support for UI icons
 - Easy CSS customization
+- Youtube support
 
 ###Compatibility
 
@@ -29,22 +30,30 @@ Chrome, Safari, Firefox, Opera, IE8+, IOS4+, Android, windows phone.
 Copy Yii-Swipebox inside protected/widgets.
 
 In your view, call your widget:
+
 ```php
 // this could be inside a yii view file
 $this->widget('application.widgets.SwipeboxWidget.SwipeboxWidget', 
 	array(
-		'images' => $images, 
+		'medias' => $medias, 
 		'hideBarsDelay' => 0, 
-		'useCss' => true
+		'useCss' => true,
+		'videoMaxWidth' => 1024,
+		'beforeOpen' => 'function(){ alert("This is a javascript function called before opening Yii-Swipebox!"); }',
+		'afterClose' => 'function(){ alert("This is a javascript function called after closing Yii-Swipebox!");  }'
 	)
 ); 
 ```
-Where images must be an array of arrays containing the url of the image, and the caption of it.
+Medias must be an array of arrays containing the url of the image or youtube video, and the caption of it.
 ```php
 array(
 	array(
-		'url' 	=> 'http://theurl.com/images/myimage.png',
-		'name' 	=> 'my caption',
+		'url' 	=> 'http://theurl.com/medias/myimage.png',
+		'name' 	=> 'My Image Caption',
+	),
+	array(
+		'url' 	=> 'http://www.youtube.com/watch?v=drMgRxhfSrA',
+		'name' 	=> 'My Awesome Youtube Video',
 	),
 	[...] // and so on...
 );
