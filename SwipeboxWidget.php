@@ -4,7 +4,8 @@
  *
  * This widget is a wrapper of the Swipebox gallery plugin 
  * http://brutaldesign.github.io/swipebox/
- * 
+ *
+ * @version 1.0
  * @author alekhin0w
  */
 class SwipeboxWidget extends CWidget {

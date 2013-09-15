@@ -1,4 +1,4 @@
-Yii-Swipebox
+Yii-Swipebox 1.0
 ================================
 
 A touchable Yii Widget lightbox.
