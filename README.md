@@ -24,6 +24,7 @@ Yii-Swipebox is a jQuery "lightbox" widget for yii, supporting desktop, mobile a
 - Retina support for UI icons
 - Easy CSS customization
 - Youtube support
+- beforeOpen and afterClose callbacks for fancy javascript forgery <3
 
 ###Compatibility
 
